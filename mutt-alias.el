@@ -1,6 +1,10 @@
 ;;; mutt-alias.el --- Lookup/insert mutt mail aliases.
-;; Copyright 1999,2000,2003 by Dave Pearson <davep@davep.org>
-;; $Revision: 1.4 $
+;; Copyright 1999-2018 by Dave Pearson <davep@davep.org>
+
+;; Author: Dave Pearson <davep@davep.org>
+;; Version: 1.4
+;; Keywords: mail, mutt
+;; URL: https://github.com/davep/mutt-alias.el
 
 ;; mutt-alias is free software distributed under the terms of the GNU
 ;; General Public Licence, version 2. For details see the file COPYING.
@@ -90,7 +94,7 @@ expansion. Note that no attempt is made to handle continued lines."
     (cons alias expansion)))
 
 (defun mutt-alias-expand (alias)
-  "Attempt to expand an alias."
+  "Attempt to expand ALIAS."
   (let ((expansion (assoc alias (mutt-alias-load-aliases))))
     (when expansion
       (cdr expansion))))
@@ -98,7 +102,7 @@ expansion. Note that no attempt is made to handle continued lines."
 (put 'mutt-alias-interactive 'lisp-indent-function 3)
 
 (defmacro mutt-alias-interactive (name alias expansion doc &rest body)
-  "Generate a function that asks for an alias.
+  "Generate a function called NAME that asks for an alias.
 
 The alias is placed into variable named by ALIAS and places it into the
 variable named by EXPANSION. If there is an expansion BODY will be evaluated
