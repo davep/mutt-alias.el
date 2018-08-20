@@ -2,7 +2,7 @@
 ;; Copyright 1999-2018 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.4
+;; Version: 1.5
 ;; Keywords: mail, mutt
 ;; URL: https://github.com/davep/mutt-alias.el
 
