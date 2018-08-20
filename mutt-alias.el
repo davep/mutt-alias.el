@@ -25,14 +25,6 @@
 
 (require 'cl)
 
-;; Attempt to handle older/other emacs.
-(eval-and-compile
-  ;; If customize isn't available just use defvar instead.
-  (unless (fboundp 'defgroup)
-    (defmacro defgroup  (&rest rest) nil)
-    (defmacro defcustom (symbol init docstring &rest rest)
-      `(defvar ,symbol ,init ,docstring))))
-
 ;; Customize options.
 
 (defgroup mutt-alias nil
