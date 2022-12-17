@@ -72,7 +72,7 @@ lines."
       (loop for file in mutt-alias-file-list do (insert-file-contents file))
       (setf (point) (point-min))
       (setq mutt-alias-aliases
-            (loop while (search-forward-regexp "^[ \t]*alias +" nil t)
+            (loop while (search-forward-regexp "^[ \t]*alias[ \t]+" nil t)
                   collect (mutt-alias-grab-alias)))))
   mutt-alias-aliases)
 
